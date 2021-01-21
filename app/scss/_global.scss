@@ -32,3 +32,15 @@ a {
   line-height: 20px;
   @extend %rubik-400;
 }
+
+.title{
+  font-size: 36px;
+  @extend %dmsans-700;
+  color: #191919;
+  margin-top: 70px;
+  text-align: center;
+}
+
+button.mixitup-control-active {
+  color: #191919;
+}

@@ -221,7 +221,7 @@
 
 .top-slider{
   &__inner{
-    background-image: url(../images/top-slider-bg.png);
+    background-image: url(../images/decor/top-slider-bg.png);
     background-repeat: no-repeat;
     background-position: right 185px center;
     background-color: $bg;
@@ -300,6 +300,123 @@ ul.slick-dots {
     }
   
 }
+
+.info{
+  height: 165px;
+  background-color: $bg-form;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__item{
+    position: relative;
+    width: 220px;
+  }
+  &__item-img{
+    position: absolute;
+    left: -75px;
+    &::after{
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: $btn;
+      border-radius: 50%;
+      position: absolute;
+      right: -3px;
+      bottom: 5px;
+      opacity: 35%;
+    }
+  }
+  &__item-title{
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: #414141;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+}
+
+.product{
+  &__filter-btn{
+    text-align: center
+  }
+  &__btn{
+    background-color: transparent;
+    border: none;
+    margin: 20px 0 80px;
+    color: $default;
+    @extend %dmsans-700;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  &__item{
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    padding-bottom: 35px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: 425px;
+    &:hover .product__item-tool {
+      opacity: 1;
+    }
+    &-img {
+      margin: auto auto;
+      object-fit: contain
+    }
+    &-title{
+      @extend %dmsans-500;
+      font-size: 16px;
+      color: $accent;
+    }
+    &-price{
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: $btn;
+    }
+    &-tools{
+      display: flex;
+      position: absolute;
+      bottom: 155px;
+    }
+    &-tool{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin: 0 10px;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      transition: all .5s;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } 
+      &:nth-child(1){
+        background-color: #fff;    
+      }
+      &:nth-child(2){
+        background-color: $btn;
+      }
+      &:nth-child(3) {
+        background-color: #fff;
+      }
+    }
+  }
+  
+}
+
+
+
 
 
 
