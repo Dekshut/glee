@@ -400,16 +400,17 @@ ul.slick-dots {
         display: flex;
         align-items: center;
         justify-content: center;
-      } 
-      &:nth-child(1){
-        background-color: #fff;    
-      }
-      &:nth-child(2){
-        background-color: $btn;
-      }
-      &:nth-child(3) {
         background-color: #fff;
+      } 
+      &:nth-child(1):hover,
+      &:nth-child(2):hover,
+      &:nth-child(3):hover{
+        background-color: $btn;
+        & path{
+          fill: #fff;
+        }
       }
+     
     }
   }
   
