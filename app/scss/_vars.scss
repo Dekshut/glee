@@ -35,3 +35,9 @@ $btn: #a3bbc8;
   font-weight: 400;
 }
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
