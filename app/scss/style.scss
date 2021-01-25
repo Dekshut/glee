@@ -70,41 +70,22 @@
 
   &__inner-shop {
     display: flex;
-    width: 130px;
+    width: 180px;
     justify-content: space-between;
     background-color: #fcd7b6;
-    padding: 16.5px 15px;
+    padding: 16.5px 40px;
     position: relative;
-
-    &::before,
-    &::after {
+    border-radius: 25px;
+    &::before{
       content: '';
+      height: 30px;
+      width: 1px;
+      background-color: #fde7d3;
       position: absolute;
-      background-color: #fcd7b6;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      top: 0;
+      top: 10px;
+      right: 90px;
+      z-index: 2;
     }
-
-    &::before {
-      left: -25px;
-    }
-
-    &::after {
-      right: -25px;
-      z-index: -1;
-    }
-  }
-
-  &__shop-line {
-    height: 30px;
-    width: 1px;
-    background-color: #fde7d3;
-    position: absolute;
-    top: 10px;
-    right: 65px;
-    z-index: 2;
   }
 
   &__inner-dots {
@@ -402,6 +383,7 @@ ul.slick-dots {
         align-items: center;
         justify-content: center;
         background-color: #fff;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
       } 
       &:nth-child(1):hover,
       &:nth-child(2):hover,
@@ -514,6 +496,7 @@ ul.slick-dots {
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
+  margin-bottom: 110px;
   &__popup {
     height: 500px;
     width: 100%;
@@ -523,9 +506,90 @@ ul.slick-dots {
   }
 }
 
+.article{
+  position: relative;
+  padding-bottom: 265px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  &__link{
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: #262626;
+    svg {
+      margin-left: 15px;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
+.article-item{
+  max-width: 370px;
+  border-radius: 10px;
+  position: relative;
+  &__news{
+    position: absolute;
+    width: 100px;
+    background-color: $btn;
+    color: #fff;
+    padding: 10px 30px;
+    line-height: 1;
+    font-size: 14px;
+    border-radius: 15px;
+    top: 235px;
+    left: 30px; 
+    @extend %poppins-700;
+  }
+  &__text{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    @extend %dmsans-500;
+    color: #262626;
+    font-size: 18px;
+    line-height: 24px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &__bottom{
+    font-size: 12px;
+    padding: 0 30px;
+    background-color: #fff;
+  }
+  &__info{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    color: #222933;
+  }
+  &__icon{
+    padding-right: 5px;
+  }
+  &__data{
+    padding-right: 30px;
+  }
+}
 
-
+.partners{
+  padding: 279px 0 90px;
+  background-color: $bg-form;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 
 
 
