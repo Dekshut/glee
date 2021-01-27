@@ -200,6 +200,18 @@
   }
 }
 
+.top{
+  text-align: center;
+  background-color: #edf1f4;
+  &__title{
+    font-size: 36px;
+    @extend %rubik-300;
+    color: #222933;
+    padding-top: 30px;
+    padding-bottom: 6px;
+  }
+}
+
 .top-slider{
   &__inner{
     background-image: url(../images/decor/top-slider-bg.png);
@@ -508,7 +520,15 @@ ul.slick-dots {
 
 .article{
   position: relative;
-  padding-bottom: 265px;
+  &::before{
+    content: '';
+    height: 186px;
+    width: 100%;
+    background-color: $bg-form;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
   &__top{
     display: flex;
     justify-content: space-between;
@@ -577,17 +597,78 @@ ul.slick-dots {
 }
 
 .partners{
-  padding: 279px 0 90px;
+  padding: 76px 0 90px;
   background-color: $bg-form;
-  position: absolute;
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: -1;
   &__list{
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+.modal{
+  padding-top: 110px;
+  max-width: 470px;
+  margin: 0 auto 120px;
+  &__label{
+    display: block;
+    color: $accent-light;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+  }
+  &__btn{
+    display: block;
+    background-color: $btn;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 18px;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 37px;
+    margin-bottom: 25px;
+  }
+  &__form-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f6f6f6;
+    color: $accent-light;
+    margin-bottom: 25px;
+  }
+  &__error{
+    color: inherit;
+  }
+  &__links{
+    text-align: center;
+  }
+  &__link{
+    color: $accent-light;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__link-btn{
+    display: block;
+    border: 2px solid $btn;
+    color: $accent;
+    font-size: 18px;
+    line-height: 1;
+    padding: 20px 0;
+    @extend %rubik-500;
   }
 }
 
