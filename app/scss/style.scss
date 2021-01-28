@@ -942,6 +942,24 @@ ul.slick-dots {
   }
 }
 
+.terms{
+  color: $accent;
+  padding: 55px 0 100px;
+  &__title{
+    @extend %rubik-500;
+    font-size: 24px;
+    padding-top: 60px;
+  }
+  &__item{
+    list-style-type: decimal-leading-zero;
+    padding-top: 15px;
+    margin-left: 30px;
+    padding-left: 5px;
+  }
+  &__text{
+    padding-top: 10px;
+  }
+}
 
 @import 'media';
 
