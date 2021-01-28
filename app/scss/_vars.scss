@@ -40,6 +40,11 @@ $btn: #a3bbc8;
   font-weight: 300;
 }
 
+%rubik-700 {
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
