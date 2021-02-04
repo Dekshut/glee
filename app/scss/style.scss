@@ -1541,5 +1541,82 @@ ul.slick-dots {
   height: 8px;
 }
 
+.product-tabs{
+  padding: 90px 0 0px;
+  &__top{
+    text-align: center;
+  }
+  &__top-item{
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $accent;
+    padding: 15px 0px;
+    width: 240px;
+    text-align: center;
+    background-color: #edf1f4;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 35px;
+    &+.product-tabs__top-item{
+      margin-left: 20px;
+    }
+  }
+  &__top-item--active{
+    background-color: $btn;
+    color: #fff;
+  }
+  &__content-item {
+    display: none;
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+  }
+}
+
+.descr{
+  color: $accent;
+}
+
+.related{
+  margin-bottom: 110px;
+  &__top{
+    margin-bottom: 70px;
+  }
+  &__title{
+    margin-top: 0;
+    text-align: left;
+  }
+  &__items{
+    .product__item{
+      display: inline-flex !important;
+      height: 380px;
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    background: transparent;
+    border: 2px solid $btn;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: -110px;
+    outline: none;
+    &.slick-disabled{
+      border: 2px solid #edf1f4;
+    }
+  }
+  .slick-next{
+    right: 0;
+    background-image: url(../images/icons/related-arrow-right.svg);
+  }
+  .slick-prev{
+    background-image: url(../images/icons/related-arrow-left.svg);
+    right: 70px;
+  }
+}
 
 @import 'media';
