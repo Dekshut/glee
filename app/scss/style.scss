@@ -574,13 +574,13 @@ ul.slick-dots {
   &__items {
     display: flex;
     justify-content: space-between;
-    width: 100%;
   }
 
   &__item {
     background-color: #feefe2;
     padding: 90px 130px 95px 385px;
     position: relative;
+    max-width: 870px;
     color: $accent;
 
     &-img {
@@ -609,7 +609,6 @@ ul.slick-dots {
       position: relative;
       @extend %rubik-500;
     }
-
     svg {
       position: absolute;
       right: 20px;
@@ -771,7 +770,6 @@ ul.slick-dots {
     padding-bottom: 25px;
     color: #222933;
   }
-
   &__icon {
     padding-right: 5px;
   }
@@ -1618,5 +1616,158 @@ ul.slick-dots {
     right: 70px;
   }
 }
+
+.blog-page{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__contet{
+    margin-right: 70px;
+  }
+  &__aside{
+    max-width: 270px;
+    width: 100%;
+  }
+  &__item{
+    margin-bottom: 50px;
+    max-width: 830px;
+  }
+  &__item-img{
+    width: 830px;
+    height: 500px;
+    object-fit: cover;
+  }
+  &__item-title{
+    font-size: 36px;
+    color: #333;
+    padding: 40px 0 30px;
+  }
+  &__item-text{
+    color: $accent;
+    margin-bottom: 30px;
+  }
+  &__item-more{
+    font-size: 16px;
+    padding: 20px;
+    border: 1px solid $btn;
+    width: 180px;
+    position: relative;
+    display: block;
+    color: $btn;
+    &::after{
+      content: '';
+      width: 22px;
+      height: 9px;
+      position: absolute;
+      background-image: url(../images/icons/arrow.svg);
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+  &__item-box{
+    position: relative;
+  }
+  .pagination{
+    padding-top: 25px;
+    justify-content: start;
+  }
+}
+
+.blog-box{
+  display: flex;
+  padding: 30px 20px;
+  color: #fff;
+  background-color: $btn;
+  width: 275px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 10px;
+  &__date{
+    margin-right: 30px;
+    &::before{
+      background-image: url(../images/icons/calendar-white.svg);
+    }
+  }
+  &__date,
+  &__author{
+    padding-left: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      width: 10pt;
+      height: 11pt;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      background-position: center center;
+    }
+  }
+  &__author{
+    &::before{
+      background-image: url(../images/icons/user-article-white.svg);
+    }
+  }
+}
+
+.filter-search{
+  &__form{
+    display: flex;
+  }
+  &__input{
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 40px;
+    width: 270px;
+  }
+  &__btn{
+    background-color: #edf1f4;
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -50px;
+    cursor: pointer;
+  }
+}
+
+.recent-post{
+  &__item{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__item-img{
+    min-width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+  &__item-title{
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  &__item-box{
+    margin-left: 20px;
+  }
+  &__item-date{
+    font-size: 12px;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    svg{
+      margin-right: 3px;
+    }
+  }
+}
+
 
 @import 'media';
