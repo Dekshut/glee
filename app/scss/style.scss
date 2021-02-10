@@ -11,12 +11,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
 .menu {
   align-items: center;
   display: flex;
+  
+  &__btn{
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -115,15 +120,16 @@
 .footer-top {
   padding: 80px 0 70px;
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid #dae4e9;
 
   &__contact {
-    width: 200px;
+    max-width: 200px;
     margin-right: 100px;
   }
 
   &__nav {
-    width: 170px;
+    max-width: 170px;
     margin-right: 130px;
   }
 
@@ -194,6 +200,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &__list {
     display: flex;
