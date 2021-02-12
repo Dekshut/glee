@@ -1,0 +1,51 @@
+.design {
+  margin-bottom: 120px;
+
+  &__filter-btn {
+    text-align: center
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    margin: 20px 0 80px;
+    color: $default;
+    @extend %dmsans-700;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 35px 0px 30px 40px;
+    position: relative;
+    height: 245px;
+
+    &-title {
+      @extend %dmsans-700;
+      font-size: 20px;
+      line-height: 22px;
+      color: #191919;
+      width: 180px;
+      position: absolute;
+      top: 40px;
+      left: 35px;
+    }
+
+    &-price {
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: $btn;
+      position: absolute;
+      top: 95px;
+      left: 35px;
+    }
+  }
+
+}

@@ -1,0 +1,52 @@
+.offer {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    background-color: #feefe2;
+    padding: 90px 130px 95px 385px;
+    position: relative;
+    max-width: 870px;
+    color: $accent;
+
+    &-img {
+      position: absolute;
+      bottom: 80px;
+      left: 120px;
+    }
+
+    &-title {
+      @extend %dmsans-700;
+      font-size: 26px;
+      padding-bottom: 25px;
+      line-height: 14px
+    }
+
+    &-text {
+      padding-bottom: 30px;
+    }
+
+    &-btn {
+      border: 1px solid #b3b7b5;
+      color: $accent-light;
+      background-color: transparent;
+      border-radius: 5px;
+      padding: 20px 85px 20px 20px;
+      position: relative;
+      @extend %rubik-500;
+    }
+
+    svg {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__item+.offer__item {
+    margin-left: 30px;
+  }
+}

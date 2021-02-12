@@ -46,15 +46,6 @@ $(function () {
     $(this).addClass('products-content__filter-btn--active')
   })
 
-  // $('.product__item-btn').on('click', function () {
-  //   $(this).addClass('product__item-btn--active')
-  // })
-
-  // $('.product__item-cart').on('click', function () {
-  //   $('.product__item-btn').removeClass('product__item-btn--active')
-  // })
-  
-
   $('.button-list').on('click', function () {
     $('.product__item').addClass('product__item--list')
     $('.products-content__inner').addClass('products-content__inner--list')

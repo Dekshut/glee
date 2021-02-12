@@ -1,0 +1,159 @@
+.footer-top {
+  padding: 80px 0 70px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dae4e9;
+
+  &__contact {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+
+  &__nav {
+    max-width: 170px;
+    margin-right: 130px;
+  }
+
+  &__item-form {
+    max-width: 270px;
+  }
+
+  &__logo {
+    margin-bottom: 27px;
+    display: block;
+  }
+
+  &__address,
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    color: #1f2044;
+    @extend %dmsans-700;
+    margin: 20px 0 20px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  &__link {
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 37px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__form-input {
+    background-color: $bg-form;
+    max-width: 170px;
+    width: 100%;
+    border: none;
+    padding: 4px 16px;
+
+    &::placeholder {
+      color: #234969;
+      font-size: 12px;
+    }
+  }
+
+  &__form-btn {
+    border: none;
+    background-color: $btn;
+    color: #fff;
+    padding: 4px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+
+.footer-bottom {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    line-height: 1;
+    padding-right: 15px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__item+.footer-bottom__item {
+    padding-left: 15px;
+    border-left: 1px solid $default;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-top {
+    justify-content: space-between;
+
+    &__contact {
+      margin-right: 30px;
+    }
+
+    &__nav {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .footer-top {
+    justify-content: flex-start;
+
+    &__contact {
+      margin-right: 70px;
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+
+    &__nav+.footer-top__nav {
+      margin-left: 70px;
+    }
+
+    &__item-form {
+      max-width: none;
+    }
+  }
+
+  .footer-bottom {
+    justify-content: center;
+
+    &__copy {
+      text-align: center;
+    }
+
+    &__list {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top__contact {
+    max-width: none;
+    width: 100%;
+  }
+}

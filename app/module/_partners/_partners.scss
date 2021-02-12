@@ -1,0 +1,13 @@
+.partners {
+  padding: 76px 0 90px;
+  background-color: $bg-form;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
