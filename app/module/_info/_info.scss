@@ -35,3 +35,32 @@
     margin-bottom: 10px;
   }
 }
+
+@media (max-width: 1200px){
+  .info{
+    padding: 0 85px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1050px){
+  .info{
+    display: block;
+    height: unset;
+    padding-left: 100px;
+    padding-right: 0;
+    &__item{
+      padding: 20px 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .info {
+    &__item-text {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}

@@ -14,17 +14,22 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
   }
 
   &__title {
     margin-top: 0;
-    margin-bottom: 50px;
+    line-height: 40px;
   }
 
   &__link {
     font-size: 16px;
     @extend %dmsans-700;
     color: #262626;
+    display: block;
+    min-width: 87px;
+    margin-left: 15px;
 
     svg {
       margin-left: 15px;
@@ -32,8 +37,9 @@
   }
 
   &__items {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
   }
 }
 
@@ -42,18 +48,25 @@
   border-radius: 10px;
   position: relative;
 
-  &__news {
-    position: absolute;
-    width: 100px;
-    background-color: $btn;
-    color: #fff;
-    padding: 10px 30px;
-    line-height: 1;
-    font-size: 14px;
-    border-radius: 15px;
-    top: 235px;
-    left: 30px;
-    @extend %poppins-700;
+  &__text {
+    position: relative;
+
+    &::before {
+      content: 'NEWS';
+      position: absolute;
+      width: 100px;
+      background-color: $btn;
+      color: #fff;
+      padding: 10px 30px;
+      line-height: 1;
+      font-size: 14px;
+      border-radius: 15px;
+      top: -13px;
+      left: 0px;
+      text-transform: uppercase;
+      @extend %poppins-700;
+      z-index: 10;
+    }
   }
 
   &__text {
@@ -85,5 +98,56 @@
 
   &__data {
     padding-right: 30px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .article {
+    &::before {
+      display: none;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 35px;
+    }
+  }
+}
+
+@media (max-width: 678px) {
+  .article {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 35px;
+    }
+  }
+
+  .article-item {
+    max-width: 100%;
+
+    &__bottom {
+      padding: 0 15px;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .article{
+    &__title{
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+  .article-item {
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }

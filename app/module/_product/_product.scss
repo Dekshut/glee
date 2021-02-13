@@ -2,13 +2,13 @@
   margin-bottom: 185px;
 
   &__filter-btn {
-    text-align: center
+    text-align: center;
+    margin: 20px 0 80px;
   }
 
   &__btn {
     background-color: transparent;
     border: none;
-    margin: 20px 0 80px;
     color: $default;
     @extend %dmsans-700;
   }
@@ -220,4 +220,42 @@
     }
   }
 
+}
+
+@media (max-width: 1200px){
+  .product{
+    &__items{
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 30px 0px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 870px){
+  .product{
+    margin-bottom: 100px;
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 30px 0px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .product{
+    margin-bottom: 100px;
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 30px 0px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
 }

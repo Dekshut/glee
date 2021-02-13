@@ -2,13 +2,13 @@
   margin-bottom: 120px;
 
   &__filter-btn {
-    text-align: center
+    text-align: center;
+    margin: 20px 0 80px;
   }
 
   &__btn {
     background-color: transparent;
     border: none;
-    margin: 20px 0 80px;
     color: $default;
     @extend %dmsans-700;
   }
@@ -47,5 +47,33 @@
       left: 35px;
     }
   }
+}
 
+@media (max-width: 870px){
+  .design{
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item{
+      height: unset;
+    }
+    &__filter-btn{
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .design{
+    margin-bottom: 60px;
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item{
+      height: unset;
+    }
+    &__filter-btn{
+      margin-bottom: 45px;
+    }
+  }
 }
