@@ -1,0 +1,44 @@
+.video-play {
+  background-image: url(../images/top-slider.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 110px;
+
+  &__popup {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 870px){
+  .video-play{
+    height: 400px;
+    margin-bottom: 60px;
+    &__popup{
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .video-play{
+    height: 300px;
+    &__popup{
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .video-play{
+    height: 200px;
+    &__popup{
+      height: 200px;
+    }
+  }
+}
